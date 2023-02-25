@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/menuFragment">
+
+    <fragment
+        android:id="@+id/menuFragment"
+        android:name="edu.uca.innovatech.investigacionsockets.MenuFragment"
+        android:label="fragment_menu"
+        tools:layout="@layout/fragment_menu" >
+        <action
+            android:id="@+id/action_menuFragment_to_hostFragment"
+            app:destination="@id/hostFragment" />
+        <action
+            android:id="@+id/action_menuFragment_to_socketFragment"
+            app:destination="@id/socketFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/hostFragment"
+        android:name="edu.uca.innovatech.investigacionsockets.HostFragment"
+        android:label="fragment_host"
+        tools:layout="@layout/fragment_host" />
+    <fragment
+        android:id="@+id/socketFragment"
+        android:name="edu.uca.innovatech.investigacionsockets.SocketFragment"
+        android:label="fragment_socket"
+        tools:layout="@layout/fragment_socket" />
+</navigation>
